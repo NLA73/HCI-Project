@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register — Good Old' Bakery</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body class="animated-bg">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="Home.html"><img src="../Assets/Logo.png" alt="Logo" /></a>
+        </div>
+        <div class="nav-links">
+          <a href="Home.html">Home</a>
+          <a href="Products.html">Products</a>
+          <a href="AboutUs.html">About Us</a>
+          <a href="Location.html">Location</a>
+          <a href="Register.html" class="active">Register</a>
+        </div>
+      </div>
+
+      <div class="bottom-nav">
+        <a href="Home.html" class="nav-item">
+          <img src="../Assets/homebtn.png" alt="home" />
+          <span class="nav-text">Home</span>
+        </a>
+        <a href="Products.html" class="nav-item">
+          <img src="../Assets/productsbtn.png" alt="Products" />
+          <span class="nav-text">Products</span>
+        </a>
+        <a href="Location.html" class="nav-item">
+          <img src="../Assets/locationbtn.png" alt="Location" />
+          <span class="nav-text">Location</span>
+        </a>
+        <a href="AboutUs.html" class="nav-item">
+          <img src="../Assets/aboutusbtn.png" alt="About Us" />
+          <span class="nav-text">About Us</span>
+        </a>
+        <a href="Register.html" class="nav-item active">
+          <img src="../Assets/active-registerbtn.png" alt="Register" />
+          <span class="nav-text">Register</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="form" id="form">
+        <div class="form-image-left">
+          <img src="../Assets/benefit.png" alt="pic_form" />
+        </div>
+
+        <form id="registerForm" action="" class="registForm">
+          <label for="name">Full Name<span class="star">*</span></label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Full Name"
+            required
+          />
+
+          <label for="datebirth"
+            >Date Of Birth<span class="star">*</span></label
+          >
+          <input type="date" name="date" id="datebirth" required />
+
+          <div>
+            <label for="gender">Gender<span class="star">*</span></label>
+            <input type="radio" name="gender" id="male" class="checkbox" />
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" class="checkbox" />
+            <label for="female">Female</label>
+          </div>
+
+          <label for="email">Email<span class="star">*</span></label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="example@gmail.com"
+            required
+          />
+
+          <label for="password">Password<span class="star">*</span></label>
+          <div class="password-container">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+            <span class="toggle-text" onclick="togglePassword('password', this)"
+              >Show</span
+            >
+          </div>
+
+          <label for="confirm-password"
+            >Confirm Password<span class="star">*</span></label
+          >
+          <div class="password-container">
+            <input
+              type="password"
+              name="confirm-password"
+              id="confirm-password"
+              placeholder="Password"
+              required
+            />
+            <span
+              class="toggle-text"
+              onclick="togglePassword('confirm-password', this)"
+              >Show</span
+            >
+          </div>
+
+          <div class="checkbox-group">
+            <input
+              type="checkbox"
+              name="agreement"
+              id="agreement"
+              class="checkbox"
+            />
+            <label for="agreement"
+              >I Agree to the Terms and Condition<span class="star"
+                >*</span
+              ></label
+            >
+          </div>
+
+          <button type="submit" class="submitbtn">
+            <strong> Register!</strong>
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3 class="footer-title">Good OLd' Bakery</h3>
+          <p class="footer-copyright">
+            &copy; 2026 Good OLd' Bakery. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="popupMessage" class="popupMessage">
+      <span class="icon">✅</span>
+      <span id="message">Successfully Register!</span>
+    </div>
+
+    <script src="../script/System.js"></script>
+  </body>
+</html>

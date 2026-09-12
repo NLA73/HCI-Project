@@ -1,0 +1,53 @@
+STRATEGI MAKSIMALISASI NILAI - HCI PROJECT (GOOD OLD' BAKERY)
+============================================================
+
+Berdasarkan analisis rubrik penilaian, berikut adalah langkah-langkah 
+untuk mendapatkan nilai maksimal (A):
+
+1. FOKUS UTAMA PENILAIAN
+------------------------
+* Konsistensi Visual (HCI Principles): Warna, font, dan layout harus 
+  seragam di 5 halaman.
+* Fitur Registrasi: Wajib ada 5 jenis input form dan 5 jenis validasi 
+  JavaScript manual (TANPA regex).
+* Responsivitas: Tampilan mobile (bawah 768px) harus sempurna.
+* Konten Halaman: Jangan ada halaman kosong. Products & Location harus detail.
+* Clean Code: Gunakan hanya eksternal CSS.
+
+2. RENCANA IMPLEMENTASI STEP-BY-STEP
+------------------------------------
+
+STEP 1: PENGISIAN KONTEN PRODUK (Products.html)
+- Buat grid produk yang menarik.
+- Tiap produk harus ada: Nama, Deskripsi Singkat, Harga, dan Gambar.
+- Gunakan Flexbox agar rapi dan responsif.
+
+STEP 2: DETAIL LOKASI (Location.html)
+- Masukkan list cabang toko.
+- Tiap cabang ada: Nama toko, Alamat/Deskripsi, Email, No Telp, 
+  Jam Operasional, dan Foto Toko.
+
+STEP 3: FORM REGISTRASI & VALIDASI (Register.html)
+- Buat form dengan elemen: Text (Name), Email, Password, Date (DOB), 
+  dan Radio/Select (Gender).
+- Buat file script.js untuk validasi:
+  a. Nama minimal 5 karakter.
+  b. Email mengandung '@' dan '.'.
+  c. Password minimal 8 karakter dan ada angka (dicek pakai loop).
+  d. Tanggal lahir tidak boleh kosong.
+  e. Checkbox "Terms & Conditions" harus dicentang.
+
+STEP 4: POLESAN AKHIR (UI/UX)
+- Gunakan Google Fonts (Montserrat untuk body, Playfair untuk heading).
+- Tambahkan efek hover pada tombol dan kartu produk.
+- Pastikan gambar tidak pecah dan ukurannya proporsional.
+
+3. STRUKTUR FILE YANG DIREKOMENDASIKAN
+--------------------------------------
+/Assets/   -> Simpan semua gambar (Logo, Background, Icons, Produk).
+/static/   -> style.css dan script.js.
+/template/ -> Semua file HTML (Home, Products, AboutUs, Location, Register).
+
+============================================================
+DIKERJAKAN OLEH: ANTIGRAVITY AI ASSISTANT
+TANGGAL: 16 MEI 2026

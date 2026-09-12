@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body class="animated-bg" onclick="tutupSidebarLuar(event)">
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="Home.html"><img src="../Assets/Logo.png" alt="Logo" /></a>
+        </div>
+        <div class="nav-links">
+          <a href="Home.html" class="active">Home</a>
+          <a href="Products.html">Products</a>
+          <a href="AboutUs.html">About Us</a>
+          <a href="Location.html">Location</a>
+          <a href="Register.html">Register</a>
+        </div>
+      </div>
+
+      <div class="bottom-nav">
+        <a href="Home.html" class="nav-item active">
+          <img src="../Assets/active-homebtn.png" alt="home" />
+          <span class="nav-text">Home</span>
+        </a>
+        <a href="Products.html" class="nav-item">
+          <img src="../Assets/productsbtn.png" alt="Products" />
+          <span class="nav-text">Products</span>
+        </a>
+        <a href="Location.html" class="nav-item">
+          <img src="../Assets/locationbtn.png" alt="Location" />
+          <span class="nav-text">Location</span>
+        </a>
+        <a href="AboutUs.html" class="nav-item">
+          <img src="../Assets/aboutusbtn.png" alt="About Us" />
+          <span class="nav-text">About Us</span>
+        </a>
+        <a href="Register.html" class="nav-item">
+          <img src="../Assets/registerbtn.png" alt="Register" />
+          <span class="nav-text">Register</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <button
+        id="sidebar-toggle"
+        class="sidebar-toggle"
+        onclick="toggleSidebar(event)"
+      >
+        ☰
+      </button>
+
+      <div id="sidebar" class="mini-sidebar">
+        <a
+          href="#promotions-section"
+          class="sidebar-item"
+          onclick="tutupSidebarMobile()"
+          >🏷️<span>Promo</span></a
+        >
+        <a
+          href="#bestseller-section"
+          class="sidebar-item"
+          onclick="tutupSidebarMobile()"
+          >🔥<span>Best</span></a
+        >
+        <a
+          href="#recommendation-section"
+          class="sidebar-item"
+          onclick="tutupSidebarMobile()"
+          >👍<span>Recom</span></a
+        >
+      </div>
+
+      <section id="promotions-section" class="home-section">
+        <h2 class="section-title">Ongoing Promotions</h2>
+        <div class="promo-container">
+          <div class="slider-wrapper">
+            <button
+              class="slide-arrow"
+              id="slide-arrow-prev"
+              onclick="slidePrev()"
+            >
+              &#8249;
+            </button>
+            <div class="compact-slider" id="compact-slider">
+              <div class="compact-slide-item">
+                <img src="../Assets/promo1.png" alt="Promo 1" />
+              </div>
+              <div class="compact-slide-item">
+                <img src="../Assets/promo2.png" alt="Promo 2" />
+              </div>
+              <div class="compact-slide-item">
+                <img src="../Assets/promo3.png" alt="Promo 3" />
+              </div>
+            </div>
+            <button
+              class="slide-arrow"
+              id="slide-arrow-next"
+              onclick="slideNext()"
+            >
+              &#8250;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="bestseller-section" class="home-section">
+        <h2 class="section-title">Best Sellers</h2>
+        <div class="products-grid">
+          <div
+            class="product-card"
+            data-title="Donut"
+            data-desc="A super soft classic donut with a variety of premium toppings, ranging from chocolate sprinkles to sweet, colorful cereals."
+            data-price="Rp 8.000 / item"
+            data-img="../Assets/donut.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img src="../Assets/donut.png" alt="Donut" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Donut</h3>
+              <p class="product-price">Rp 8.000 / item</p>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-title="Strawberry Cake"
+            data-desc="A fluffy sponge cake layered with fresh vanilla cream and abundant chunks of real strawberries."
+            data-price="Rp 350.000 / item"
+            data-img="../Assets/strawberrycake.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img src="../Assets/strawberrycake.png" alt="Strawberry Cake" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Strawberry Cake</h3>
+              <p class="product-price">Rp 350.000 / item</p>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-title="Brownies"
+            data-desc="Premium baked fudgy brownies packed with select pure chocolate. Features a crispy shiny crust on the surface."
+            data-price="Rp 150.000 / box"
+            data-img="../Assets/brownies.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img src="../Assets/brownies.png" alt="Brownies" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Brownies</h3>
+              <p class="product-price">Rp 150.000 / box</p>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-title="Original Croissant"
+            data-desc="A classic French pastry with a super flaky crust on the outside, yet incredibly soft and buttery on the inside."
+            data-price="Rp 50.000 / pcs"
+            data-img="../Assets/croissant.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img src="../Assets/croissant.png" alt="Croissant" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Original Croissant</h3>
+              <p class="product-price">Rp 50.000 / pcs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="recommendation-section" class="home-section">
+        <h2 class="section-title">Recommendation</h2>
+        <div class="products-grid">
+          <div
+            class="product-card"
+            data-title="Cinnamon Roll"
+            data-desc="Soft bread rolls infused with a strong cinnamon aroma, topped with a melting sugar glaze."
+            data-price="Rp 25.000 / pcs"
+            data-img="../Assets/cinnamonroll.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img src="../Assets/cinnamonroll.png" alt="Cinnamon Roll" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Cinnamon Roll</h3>
+              <p class="product-price">Rp 25.000 / pcs</p>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-title="Classic Cheesecake"
+            data-desc="A dense and velvety smooth New York style cheesecake crafted with rich cream cheese on a sweet, buttery graham cracker crust."
+            data-price="Rp 48.000 / slice"
+            data-img="../Assets/cheesecake.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img src="../Assets/cheesecake.png" alt="Classic Cheesecake" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Classic Cheesecake</h3>
+              <p class="product-price">Rp 48.000 / slice</p>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-title="Berry Danish"
+            data-desc="A delicate, laminated pastry topped with a generous dollop of velvety cream cheese and fresh seasonal berries."
+            data-price="Rp 25.000 / piece"
+            data-img="../Assets/danish.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img src="../Assets/danish.png" alt="Berry Danish" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Berry Danish</h3>
+              <p class="product-price">Rp 25.000 / piece</p>
+            </div>
+          </div>
+          <div
+            class="product-card"
+            data-title="Chocolate Croissant"
+            data-desc="Authentic French pastry with a crispy, buttery outer layer, stuffed with a premium dark chocolate bar."
+            data-price="Rp 55.000 / pcs"
+            data-img="../Assets/chococroissant.png"
+            onclick="bukaProductPreview(this)"
+          >
+            <div class="product-image">
+              <img
+                src="../Assets/chococroissant.png"
+                alt="Chocolate Croissant"
+              />
+            </div>
+            <div class="product-info">
+              <h3 class="product-name">Chocolate Croissant</h3>
+              <p class="product-price">Rp 55.000 / pcs</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3 class="footer-title">Good OLd' Bakery</h3>
+          <p class="footer-copyright">
+            &copy; 2026 Good OLd' Bakery. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      id="productPreview"
+      class="productPreview-overlay"
+      onclick="tutupProductPreviewLuar(event)"
+    >
+      <div class="productPreview-card">
+        <div class="productPreview-image-wrap">
+          <img id="productPreviewImg" src="" alt="" />
+          <span class="productPreview-close" onclick="tutupProductPreview()"
+            >&times;</span
+          >
+        </div>
+        <div class="productPreview-info-wrap">
+          <h2 id="productPreviewName"></h2>
+          <p id="productPreviewDesc"></p>
+          <p id="productPreviewPrice"></p>
+          <div class="quantity-container">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-control">
+              <button type="button" id="btn-minus" onclick="kurangiQty()">
+                -
+              </button>
+              <input id="quantity" type="number" value="1" min="1" />
+              <button type="button" id="btn-plus" onclick="tambahQty()">
+                +
+              </button>
+            </div>
+          </div>
+          <button
+            id="addtocartbtn"
+            class="productPreview-btn"
+            onclick="tambahKeKeranjang()"
+          >
+            ADD TO CART
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="popupMessage" class="popupMessage">
+      <span class="icon">🛒</span>
+      <span id="message">Product successfully added to cart!</span>
+    </div>
+    <script src="../script/System.js"></script>
+  </body>
+</html>
